@@ -1,0 +1,12 @@
+# Folders that doesn't need to be avaliated
+/node_modules
+/coverage
+/src/assets
+/src/**/*.md
+
+# Root files
+.editorconfig
+.eslintignore
+.gitattributes
+.gitignore
+yarn.lock
