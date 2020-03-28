@@ -25,10 +25,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: Install dependencies
-    - run: npm install
+      - run: npm install
     - name: Run tests
-    - run: npm run test:ci
+      - run: npm run test:ci
     - name: Send coverage report
-    - run: npm run send:coverage:report
+      - run: npm run send:coverage:report
       env:
         CI: true
