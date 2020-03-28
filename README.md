@@ -1,5 +1,7 @@
 # Financial App
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/d95f94181b193fb98758/maintainability)](https://codeclimate.com/github/Jeovania/finance-mobile-app/maintainability) [![codecov](https://codecov.io/gh/Jeovania/finance-mobile-app/branch/master/graph/badge.svg)](https://codecov.io/gh/Jeovania/finance-mobile-app)
+
 In this code challenge I've implemented the awesome "**_Finance - Mobile App_**" design from [Anastasia](https://dribbble.com/anastasia-tino) from Dribbble. 🎉
 
 You can check the original design [HERE](https://dribbble.com/shots/10810913-Finance-Mobile-App) and other design from Anastasia on her dribbble account (https://dribbble.com/anastasia-tino) 👀
