@@ -2,10 +2,10 @@
 // https://jestjs.io/docs/en/configuration.html
 
 module.exports = {
-  preset: "react-native",
+  preset: 'react-native',
 
   // An array of file extensions your modules use
-  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
 
   // All imported modules in your tests should be mocked automatically
   // automock: false,
@@ -28,26 +28,19 @@ module.exports = {
   // @todo Remover dist e routes do ignore quando testados
   // An array of glob patterns indicating a set of files for which coverage information should be collected
   collectCoverageFrom: [
-    "src/**/*.{js,jsx,ts,tsx}",
-    "!**/coverage/**",
-    "!**/node_modules/**",
-    "!**/babel.config.js",
-    "!**/jest.setup.js"
+    'src/**/*.{ts,tsx}',
+    '!**/coverage/**',
+    '!**/node_modules/**',
+    '!**/babel.config.js',
+    '!**/jest.setup.js',
+    '!src/config/**',
   ],
 
   // The directory where Jest should output its coverage files
-  coverageDirectory: "coverage",
+  coverageDirectory: 'coverage',
 
   // An array of regexp pattern strings used to skip coverage collection
-  coveragePathIgnorePatterns: [
-    "/node_modules/",
-    "android",
-    "ios",
-    "scripts",
-    "constants",
-    "types.ts",
-    ".d.ts"
-  ],
+  coveragePathIgnorePatterns: ['/node_modules/', 'android', 'ios', 'scripts', 'constants', 'types.ts', '.d.ts'],
 
   // A list of reporter names that Jest uses when writing coverage reports
   // coverageReporters: [
@@ -60,11 +53,11 @@ module.exports = {
   // This will be used to configure minimum threshold enforcement for coverage results.
   coverageThreshold: {
     global: {
-      branches: 70,
-      functions: 80,
-      lines: 80,
-      statements: 80
-    }
+      branches: 30,
+      functions: 30,
+      lines: 30,
+      statements: 30,
+    },
   },
 
   // A path to a custom dependency extractor
@@ -84,11 +77,11 @@ module.exports = {
 
   // A set of global variables that need to be available in all test environments
   globals: {
-    __DEV__: false
+    __DEV__: false,
   },
 
   // An array of directory names to be searched recursively up from the requiring module's location
-  moduleDirectories: ["node_modules"],
+  moduleDirectories: ['node_modules'],
 
   // A map from regular expressions to module names that allow to stub out resources with a single module
   // moduleNameMapper: {},
@@ -135,13 +128,13 @@ module.exports = {
   // setupFiles: ['<rootDir>/enzyme.config.js'],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  setupFilesAfterEnv: ["./jest.setup.js"],
+  setupFilesAfterEnv: ['./jest.setup.js'],
 
   // A list of paths to snapshot serializer modules Jest should use for snapshot testing
   // snapshotSerializers: ['enzyme-to-json/serializer'],
 
   // The test environment that will be used for testing
-  testEnvironment: "node",
+  testEnvironment: 'node',
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {
@@ -153,13 +146,13 @@ module.exports = {
 
   // The glob patterns Jest uses to detect test files
   testMatch: [
-    "<rootDir>/src/index.test.tsx",
-    "<rootDir>/src/**/?(*.)+(spec|test).ts?(x)",
-    "<rootDir>/src/**/tests/index.ts?(x)"
+    '<rootDir>/src/index.test.tsx',
+    '<rootDir>/src/**/?(*.)+(spec|test).ts?(x)',
+    '<rootDir>/src/**/tests/index.ts?(x)',
   ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-  testPathIgnorePatterns: ["<rootDir>/node_modules/"],
+  testPathIgnorePatterns: ['<rootDir>/node_modules/'],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
   // testRegex: [],
@@ -174,16 +167,16 @@ module.exports = {
   // testURL: 'http://localhost',
 
   // Setting this value to "fake" allows the use of fake timers for functions such as "setTimeout"
-  timers: "fake",
+  timers: 'fake',
 
   // A map from regular expressions to paths to transformers
   transform: {
-    "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
+    '^.+\\.js$': '<rootDir>/node_modules/react-native/jest/preprocessor.js',
   },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   transformIgnorePatterns: [
-    "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base)"
+    'node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base)',
   ],
 
   // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
@@ -196,5 +189,5 @@ module.exports = {
   // watchPathIgnorePatterns: [],
 
   // Whether to use watchman for file crawling
-  watchman: true
-};
+  watchman: true,
+}

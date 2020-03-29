@@ -1,0 +1,11 @@
+{
+  "home": {
+    "title": "Home screen"
+  },
+  "my-cards": {
+    "title": "My Cards screen"
+  },
+  "send-money": {
+    "title": "Send Money screen"
+  }
+}

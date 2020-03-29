@@ -1,0 +1,11 @@
+/.git
+/.vscode
+node_modules
+yarn.lock
+coverage/
+.jest
+.editorconfig
+.gitattributes
+.gitignore
+*.json
+*.md
