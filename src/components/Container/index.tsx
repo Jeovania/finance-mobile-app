@@ -1,3 +1,7 @@
-import { View } from 'react-native'
+import React from 'react'
+import { StyledContainer } from './styles'
+import { Props } from './types'
 
-export default View
+export default function Container({ children, ...otherProps }: Props): React.ReactElement {
+  return <StyledContainer {...otherProps}>{children}</StyledContainer>
+}

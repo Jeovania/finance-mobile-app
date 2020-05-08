@@ -1,13 +1,13 @@
 import { TouchableOpacity } from 'react-native'
 import styled from 'styled-components/native'
-import { space, color, border } from 'styled-system'
+import { space, border, color, flexbox } from 'styled-system'
 
 export const StyledButton = styled(TouchableOpacity)`
   ${space}
-  ${color}
   ${border}
-  width: 56px;
-  height: 56px;
-  alignItems: center;
-  justifyContent: center;
+  ${color}
+  ${flexbox}
+  width: 58px;
+  height: 58px;
+  border-radius: 58px;
 `

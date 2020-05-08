@@ -1,3 +1,7 @@
-import { Image } from 'react-native'
+import React from 'react'
+import { StyledAvatar } from './styles'
+import { Props } from './types'
 
-export default Image
+export default function Avatar({ imageUrl, size, ...otherProps }: Props): React.ReactElement {
+  return <StyledAvatar {...otherProps} resizeMode="contain" size={size} source={{ uri: imageUrl }} />
+}

@@ -5,55 +5,35 @@ declare module 'styled-components' {
     spacing: number[]
     colors: {
       primary: string
-      secondary: string[]
+      secondary: string
       gray: string[]
-      semantic: {
-        success: string
-        warning: string
-        error: string
-        info: string
-      }
       black: string
       white: string
     }
     fonts: {
-      headings: string
-      headingsMedium: string
-      body: string
-      bodyRegular: string
+      bold: string
+      light: string
     }
     fontSizes: number[]
-    borderWidths: number[]
     radii: number[]
-    opacity: number[]
   }
 }
 
 const theme: DefaultTheme = {
   spacing: [0, 4, 8, 12, 16, 24, 32, 40, 44],
   colors: {
-    primary: '#733dbf',
-    secondary: ['#52b6b0', '#532f80', '#e95582', '#ffbc66'],
-    gray: ['#333', '#666', '#999', '#c2c2c2', '#ddd', '#eee', '#f9f9f9'],
-    semantic: {
-      success: '#00a99d',
-      warning: '#fcc14f',
-      error: '#ff6c60',
-      info: '#3facde',
-    },
-    black: '#333',
+    primary: '#6e21d1',
+    secondary: '#e55f91',
+    gray: ['#333', '#666', '#d1d1d1', '#f1f1f1'],
+    black: '#000',
     white: '#fff',
   },
   fonts: {
-    headings: 'Quicksand-Bold',
-    headingsMedium: 'Quicksand-Medium',
-    body: 'Roboto-Medium',
-    bodyRegular: 'Roboto-Regular',
+    bold: 'Montserrat-Bold',
+    light: 'Montserrat-Regular',
   },
-  fontSizes: [11, 12, 14, 16, 18, 20, 24, 32, 36],
-  borderWidths: [0, 0.5, 1, 2],
-  radii: [2, 4, 5, 8, 10, 20],
-  opacity: [0, 5, 10, 15, 25, 45, 75, 100],
+  fontSizes: [12, 16, 18, 28, 32, 48],
+  radii: [4, 8, 12, 16, 18, 20, 40],
 }
 
 export default theme

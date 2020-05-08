@@ -24,6 +24,7 @@ module.exports = {
   rules: {
     'prettier/prettier': ['error'],
     'react/jsx-props-no-spreading': 'off',
+    'import/prefer-default-export': 'off',
     camelcase: [2, { properties: 'always' }],
     complexity: ['error', { max: 5 }],
     'import/no-extraneous-dependencies': [

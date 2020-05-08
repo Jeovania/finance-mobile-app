@@ -1,11 +1,27 @@
 {
+  "common": {
+    "price": "${{value}}",
+    "full_datetime": "Mai 23, 11:34 AM",
+    "card_number": "**** {{cardNumber}}"
+  },
   "home": {
-    "title": "Home screen"
+    "total_balance_label": "Total balance",
+    "total_balance_value": "$12,689",
+    "choose_card_label": "Choose card",
+    "favorites_label": "Favorites",
+    "selected_label": "Selected",
+    "send_button": "Send"
   },
-  "my-cards": {
-    "title": "My Cards screen"
+  "send_money": {
+    "send_money_to": "Sending money\nto {{name}}",
+    "confirm_button": "Confirm"
   },
-  "send-money": {
-    "title": "Send Money screen"
+  "my_cards": {
+    "my_cards_label": "My cards",
+    "balance_label": "Balance",
+    "popular_categories_label": "Popular categories",
+    "bills_label": "Bills",
+    "food_label": "Food",
+    "latest_transactions_label": "Latest transactions"
   }
 }
