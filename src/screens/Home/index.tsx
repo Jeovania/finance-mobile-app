@@ -27,13 +27,13 @@ export default function Home({ navigation }: Props): JSX.Element {
       </Container>
 
       <Container bg="white" p={4} top={-50} borderRadius={6}>
-        <Text size="lg" isBold mb={3}>
+        <Text size="xl" isBold my={3}>
           {t('choose_card_label')}
         </Text>
 
         <CreditCard title="Ballance" value={t('common:price', { value: '8,567' })} size="small" />
 
-        <Text size="lg" isBold mt={4} mb={3}>
+        <Text size="xl" isBold mt={4} mb={3}>
           {t('favorites_label')}
         </Text>
 
@@ -49,11 +49,11 @@ export default function Home({ navigation }: Props): JSX.Element {
         <Container flexDirection="row" justifyContent="space-between" my={4}>
           <Container flexDirection="column">
             <Text mb={2}>{t('selected_label')}</Text>
-            <Text size="lg" isBold>
+            <Text size="xl" isBold>
               Bella Campbell
             </Text>
           </Container>
-          <Avatar imageUrl="https://vuesax.com/avatars/avatar-3.png" size={68} />
+          <Avatar imageUrl="https://vuesax.com/avatars/avatar-3.png" size={75} />
         </Container>
 
         <ButtonGroup>

@@ -7,7 +7,7 @@ export const StyledButton = styled(TouchableOpacity)`
   ${border}
   ${color}
   ${flexbox}
-  width: 58px;
-  height: 58px;
-  border-radius: 58px;
+  width: 53px;
+  height: 53px;
+  border-radius: 53px;
 `

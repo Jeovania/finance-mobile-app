@@ -17,15 +17,15 @@ export default function ListItem({ rightContent, title, date, value, ...otherPro
         {rightContent}
 
         <Container>
-          <Text size="md" isBold mb={1}>
+          <Text size="sm" isBold mb={1}>
             {title}
           </Text>
-          <Text size="sm" color="gray.1">
+          <Text size="xs" color="gray.1">
             {date}
           </Text>
         </Container>
       </Container>
-      <Text size="md" isBold>
+      <Text size="lg" isBold>
         {value}
       </Text>
     </Container>

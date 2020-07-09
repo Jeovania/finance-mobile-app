@@ -6,8 +6,9 @@ export const StyledButton = styled(TouchableOpacity)`
   ${space}
   ${color}
   ${border}
-  width: 56px;
-  height: 56px;
+  width: 75px;
+  height: 75px;
   alignItems: center;
+  border-radius: 18px;
   justifyContent: center;
 `

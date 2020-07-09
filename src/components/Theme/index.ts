@@ -32,7 +32,7 @@ const theme: DefaultTheme = {
     bold: 'Montserrat-Bold',
     light: 'Montserrat-Regular',
   },
-  fontSizes: [12, 16, 18, 28, 32, 48],
+  fontSizes: [16, 18, 20, 22, 26, 44],
   radii: [4, 8, 12, 16, 18, 20, 40],
 }
 

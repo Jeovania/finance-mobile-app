@@ -1,5 +1,5 @@
 import React from 'react'
-import { SafeAreaView, View } from 'react-native'
+import { SafeAreaView, View, FlatList } from 'react-native'
 import { useTranslation } from 'react-i18next'
 import { Container, Avatar, IconButton, Text, CategoryCard, ListItem, CreditCard } from '../../components'
 import { Props } from './types'
@@ -12,7 +12,7 @@ export default function MyCards({ navigation }: Props): JSX.Element {
       <Container bg="primary" height={300} px={4} borderBottomRightRadius={6} borderBottomLeftRadius={6}>
         <SafeAreaView />
         <Container flexDirection="row" justifyContent="space-between" alingItems="center" mb={4}>
-          <Avatar size={42} imageUrl="https://vuesax.com/avatars/avatar-3.png" />
+          <Avatar size={46} imageUrl="https://vuesax.com/avatars/avatar-3.png" />
           <Text size="lg" color="white">
             +
           </Text>
@@ -34,32 +34,42 @@ export default function MyCards({ navigation }: Props): JSX.Element {
         /> */}
 
       <Container m={4}>
-        <Text size="lg" isBold mb={3}>
+        <Text size="xl" isBold mb={3}>
           {t('popular_categories_label')}
         </Text>
 
-        <CategoryCard icon={<View />} title={t('bills_label')} onPress={(): void => navigation.push('SendMoney')} />
-        <CategoryCard icon={<View />} title={t('food_label')} onPress={(): void => navigation.push('SendMoney')} />
-
-        <Text size="lg" isBold mb={3}>
-          {t('latest_transactions_label')}
-        </Text>
-
-        <ListItem
-          mb={3}
-          title="Dribbble"
-          date={t('common:full_datetime')}
-          value={t('common:price', { value: '15.00' })}
-          onPress={(): void => navigation.push('SendMoney')}
-          rightContent={<Avatar size={42} mr={3} imageUrl="https://vuesax.com/avatars/avatar-3.png" />}
+        <FlatList
+          data={[
+            { id: 1, title: 'bills_label' },
+            { id: 2, title: 'food_label' },
+          ]}
+          horizontal
+          ItemSeparatorComponent={(): React.ReactElement => <Container mx={2} />}
+          renderItem={({ item }): React.ReactElement => (
+            <CategoryCard icon={<View />} title={t(item.title)} onPress={(): void => navigation.push('SendMoney')} />
+          )}
         />
 
-        <ListItem
-          title="Invision"
-          date={t('common:full_datetime')}
-          value={t('common:price', { value: '8.03' })}
-          onPress={(): void => navigation.push('SendMoney')}
-          rightContent={<Avatar size={42} mr={3} imageUrl="https://vuesax.com/avatars/avatar-3.png" />}
+        <FlatList
+          data={[
+            { id: 1, title: 'Dribbble', value: '15.00', image: 'https://vuesax.com/avatars/avatar-3.png' },
+            { id: 2, title: 'Invision', value: '8.03', image: 'https://vuesax.com/avatars/avatar-3.png' },
+          ]}
+          ListHeaderComponent={(): React.ReactElement => (
+            <Text size="xl" isBold my={4}>
+              {t('latest_transactions_label')}
+            </Text>
+          )}
+          ItemSeparatorComponent={(): React.ReactElement => <Container mb={3} />}
+          renderItem={({ item }): React.ReactElement => (
+            <ListItem
+              title={item.title}
+              date={t('common:full_datetime')}
+              value={t('common:price', { value: item.value })}
+              onPress={(): void => navigation.push('SendMoney')}
+              rightContent={<Avatar size={55} mr={3} imageUrl={item.image} />}
+            />
+          )}
         />
       </Container>
     </Container>

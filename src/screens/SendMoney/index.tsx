@@ -10,7 +10,7 @@ export default function SendMoney({ navigation }: Props): JSX.Element {
   return (
     <SafeAreaView>
       <Container m={4}>
-        <Text size="xl" textAlign="center" mb={5}>
+        <Text size="xl" textAlign="center" mb={5} style={{ lineHeight: 26 * 1.5 }}>
           {t('send_money_to', { name: 'Bella Campbell' })}
         </Text>
 

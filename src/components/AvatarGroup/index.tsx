@@ -9,7 +9,7 @@ export default function AvatarGroup({ children }: Props): React.ReactElement {
         children,
         (child): React.ReactNode => (
           <Container key={child.id} flexDirection="row-reverse">
-            {React.cloneElement(child, { mr: -18, borderWidth: 3, size: 60 })}
+            {React.cloneElement(child, { mr: -18, borderWidth: 3, size: 55 })}
           </Container>
         ),
       )}
